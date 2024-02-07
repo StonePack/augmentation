@@ -5,7 +5,7 @@ import 'dart:math';
 import 'package:flutter/rendering.dart';
 
 extension ColorExtension on Color {
-  String get hex => value.toRadixString(16);
+  String get hex => value.toRadixString(16).substring(2).padLeft(6, '0');
 
   Color withLuminance(double increment) {
     HSLColor hslColor = HSLColor.fromColor(this);
